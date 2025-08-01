@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneGuard - Smart Phone Usage & Community Safety</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>PhoneGuard</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#risks" class="nav-link">Risks</a></li>
+                <li><a href="#solutions" class="nav-link">Solutions</a></li>
+                <li><a href="#community" class="nav-link">Community</a></li>
+                <li><a href="#tools" class="nav-link">Tools</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Protect Your Digital Life</span>
+                </h1>
+                <p class="hero-subtitle">Learn about phone information security, privacy risks, and join our community-driven solutions for a safer digital world.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('risks')">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Learn Risks
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('solutions')">
+                        <i class="fas fa-lightbulb"></i>
+                        Get Solutions
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="app-grid">
+                            <div class="app-icon secure"></div>
+                            <div class="app-icon warning"></div>
+                            <div class="app-icon safe"></div>
+                            <div class="app-icon alert"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risks Section -->
+    <section id="risks" class="risks">
+        <div class="container">
+            <h2 class="section-title">Phone Information <span class="gradient-text">Risks & Misuse</span></h2>
+            <div class="risks-grid">
+                <div class="risk-card" data-aos="fade-up">
+                    <div class="risk-icon">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>Data Theft</h3>
+                    <p>Personal information, contacts, and private messages can be stolen through malicious apps and phishing attacks.</p>
+                    <div class="risk-stats">
+                        <span class="stat">67%</span>
+                        <span class="stat-label">of users unaware</span>
+                    </div>
+                </div>
+                <div class="risk-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="risk-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Location Tracking</h3>
+                    <p>Apps can track your location without consent, creating detailed movement patterns and privacy violations.</p>
+                    <div class="risk-stats">
+                        <span class="stat">89%</span>
+                        <span class="stat-label">of apps track location</span>
+                    </div>
+                </div>
+                <div class="risk-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="risk-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Camera/Mic Access</h3>
+                    <p>Unauthorized access to camera and microphone can lead to blackmail, stalking, and privacy invasion.</p>
+                    <div class="risk-stats">
+                        <span class="stat">45%</span>
+                        <span class="stat-label">grant unnecessary access</span>
+                    </div>
+                </div>
+                <div class="risk-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="risk-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Financial Fraud</h3>
+                    <p>Banking apps and payment information can be compromised, leading to financial losses and identity theft.</p>
+                    <div class="risk-stats">
+                        <span class="stat">$2.7B</span>
+                        <span class="stat-label">lost to mobile fraud</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions">
+        <div class="container">
+            <h2 class="section-title">Community-Driven <span class="gradient-text">Solutions</span></h2>
+            <div class="solutions-grid">
+                <div class="solution-card" data-aos="fade-right">
+                    <div class="solution-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Watch</h3>
+                    <p>Join our community-driven app review system where users report suspicious apps and share security tips.</p>
+                    <button class="btn btn-outline" onclick="joinCommunity()">Join Now</button>
+                </div>
+                <div class="solution-card" data-aos="fade-left">
+                    <div class="solution-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Privacy Guardian</h3>
+                    <p>Our AI-powered tool scans apps for privacy violations and provides real-time security recommendations.</p>
+                    <button class="btn btn-outline" onclick="tryGuardian()">Try Guardian</button>
+                </div>
+                <div class="solution-card" data-aos="fade-right">
+                    <div class="solution-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Security Academy</h3>
+                    <p>Free educational resources and workshops to help communities understand and prevent phone security risks.</p>
+                    <button class="btn btn-outline" onclick="startLearning()">Start Learning</button>
+                </div>
+                <div class="solution-card" data-aos="fade-left">
+                    <div class="solution-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Neighborhood Network</h3>
+                    <p>Local community groups that share security alerts and help vulnerable members protect their devices.</p>
+                    <button class="btn btn-outline" onclick="findNetwork()">Find Network</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Tools Section -->
+    <section id="tools" class="tools">
+        <div class="container">
+            <h2 class="section-title">Interactive <span class="gradient-text">Security Tools</span></h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>App Permission Checker</h3>
+                    <div class="permission-checker">
+                        <input type="text" id="appName" placeholder="Enter app name..." class="tool-input">
+                        <button onclick="checkPermissions()" class="btn btn-primary">Check Permissions</button>
+                        <div id="permissionResult" class="permission-result"></div>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>Security Score Calculator</h3>
+                    <div class="security-calculator">
+                        <div class="question">
+                            <label>Do you use 2FA?</label>
+                            <select id="q1" class="tool-select">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="question">
+                            <label>Do you update apps regularly?</label>
+                            <select id="q2" class="tool-select">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="question">
+                            <label>Do you use a VPN?</label>
+                            <select id="q3" class="tool-select">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <button onclick="calculateScore()" class="btn btn-primary">Calculate Score</button>
+                        <div id="scoreResult" class="score-result"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community">
+        <div class="container">
+            <h2 class="section-title">Join Our <span class="gradient-text">Community</span></h2>
+            <div class="community-content">
+                <div class="community-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10,000+</span>
+                        <span class="stat-label">Members</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Apps Reviewed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                </div>
+                <div class="community-form">
+                    <h3>Stay Connected</h3>
+                    <form id="communityForm" onsubmit="joinNewsletter(event)">
+                        <input type="email" placeholder="Enter your email" required class="form-input">
+                        <button type="submit" class="btn btn-primary">Join Newsletter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PhoneGuard</h4>
+                    <p>Protecting communities through education and technology.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Security Guide</a></li>
+                        <li><a href="#">Privacy Tips</a></li>
+                        <li><a href="#">Community Forum</a></li>
+                        <li><a href="#">Emergency Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@phoneguard.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Community Hub</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PhoneGuard. All rights reserved. | Made with ❤️ for the community</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
